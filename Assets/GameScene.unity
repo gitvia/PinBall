@@ -160,7 +160,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f6e213c2116b2549b32b6aa80f4572f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
 --- !u!114 &23420257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,7 +192,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 'SCORE:'
 --- !u!222 &23420258
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1007,7 +1006,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4506837062208606, guid: c28c223c7dcf01442906b1ac7565f07e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.45
+      value: -2.07
       objectReference: {fileID: 0}
     - target: {fileID: 4506837062208606, guid: c28c223c7dcf01442906b1ac7565f07e, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1943,6 +1942,10 @@ Prefab:
     - target: {fileID: 4975687154271476, guid: 37004cdc9d02b5e4fb94dcd63c20613a, type: 2}
       propertyPath: m_RootOrder
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1253986534377246, guid: 37004cdc9d02b5e4fb94dcd63c20613a, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37004cdc9d02b5e4fb94dcd63c20613a, type: 2}
