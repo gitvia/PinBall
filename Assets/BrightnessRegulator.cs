@@ -17,28 +17,19 @@ public class BrightnessRegulator : MonoBehaviour {
     //ターゲットのデフォルトの色
     Color defaultColor = Color.white;
 
-    //スコアを表示するテキスト
-    private GameObject scoreText;
-    //スコア増加分
-    private int incscore = 0;
-
     // Use this for initialization
     void Start() {
 
         //タグによって光らせる色を変える
-        //タグによってスコアの増分を変える
         if (tag == "SmallStarTag")
         {
             this.defaultColor = Color.white;
-            this.incscore = 10;
         } else if (tag == "LargeStarTag")
         {
             this.defaultColor = Color.yellow;
-            this.incscore = 20;
         } else if (tag == "SmallCloudTag" || tag == "LargeCloudTag")
         {
             this.defaultColor = Color.cyan;
-            this.incscore = 5;
         }
 
         //オブジェクトにアタッチしているMaterialを取得
@@ -46,9 +37,6 @@ public class BrightnessRegulator : MonoBehaviour {
 
         //オブジェクトの最初の色を設定
         myMaterial.SetColor("_EmissionColor", this.defaultColor * minEmission);
-
-        //シーン中のGameOverTextオブジェクトを取得
-        this.scoreText = GameObject.Find("ScoreText");
     }
 
     // Update is called once per frame
@@ -72,8 +60,5 @@ public class BrightnessRegulator : MonoBehaviour {
     {
         //角度を180に設定
         this.degree = 180;
-
-        //スコアを増加
-        this.scoreText.GetComponent<ScoreController>().score += this.incscore;
     }
 }
